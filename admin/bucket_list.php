@@ -42,6 +42,16 @@ $buckets = getBucketList();
 include '../views/partials/header.php';
 ?>
 
+<style>
+    .form-check-input:checked {
+        background-color: var(--accent);
+        border-color: var(--accent);
+    }
+    .cursor-pointer {
+        cursor: pointer;
+    }
+</style>
+
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-md-3 mb-4">
@@ -91,16 +101,19 @@ include '../views/partials/header.php';
                             <?php foreach ($buckets as $b): ?>
                                 <tr>
                                     <td>
-                                        <form method="POST" class="d-inline">
-                                            <input type="hidden" name="id" value="<?= $b['id'] ?>">
-                                            <input type="hidden" name="status" value="<?= $b['is_done'] ?>">
-                                            <button type="submit" name="toggle"
-                                                class="btn btn-sm <?= $b['is_done'] ? 'btn-success' : 'btn-outline-secondary' ?>">
-                                                <?= $b['is_done'] ? 'Selesai' : 'Belum' ?>
-                                            </button>
-                                        </form>
+                                        <div class="form-check form-switch cursor-pointer">
+                                            <form method="POST" id="form-toggle-<?= $b['id'] ?>" class="m-0">
+                                                <input type="hidden" name="id" value="<?= $b['id'] ?>">
+                                                <input type="hidden" name="status" value="<?= $b['is_done'] ?>">
+                                                <input type="hidden" name="toggle" value="1">
+                                                <input class="form-check-input" type="checkbox" role="switch" 
+                                                       id="switch-<?= $b['id'] ?>" 
+                                                       <?= $b['is_done'] ? 'checked' : '' ?>
+                                                       onchange="document.getElementById('form-toggle-<?= $b['id'] ?>').submit()">
+                                            </form>
+                                        </div>
                                     </td>
-                                    <td class="<?= $b['is_done'] ? 'text-decoration-line-through text-muted' : '' ?>">
+                                    <td class="<?= $b['is_done'] ? 'text-decoration-line-through text-muted' : '' ?>" style="font-size: 1.1rem;">
                                         <?= htmlspecialchars($b['title']) ?>
                                     </td>
                                     <td class="text-end">
