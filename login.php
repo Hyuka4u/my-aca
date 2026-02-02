@@ -42,7 +42,7 @@ include 'views/partials/header.php';
                     <div class="mb-3">
                         <label class="form-label">Master Key</label>
                         <input type="password" name="master_key" class="form-control"
-                            placeholder="Masukkan kata kunci (Matcha)" required>
+                            placeholder="Masukkan kata kunci" required>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Unlock Dashboard</button>
                 </form>

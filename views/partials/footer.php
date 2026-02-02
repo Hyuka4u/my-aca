@@ -1,6 +1,6 @@
 <footer>
     <div class="container">
-        <small style="color:var(--muted)">Made with 💚 — Khusus untuk kesayanganku Tasya Nurmaliya.</small>
+        <small style="color:var(--muted)">Made with 💚 — Khusus untuk kesayanganku.</small>
     </div>
 </footer>
 

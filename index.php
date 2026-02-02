@@ -28,7 +28,7 @@ include 'views/partials/header.php';
     function doLogin() {
         const pw = document.getElementById('passwordInput').value.trim();
         if (!pw) {
-            showLoginMsg('Isi dulu ya Sayangg');
+            showLoginMsg('Isi dulu woyyy');
             return;
         }
         if (pw.toLowerCase() === SETTINGS.lockPassword.toLowerCase()) {
@@ -56,15 +56,15 @@ include 'views/partials/header.php';
 
 <div id="loginOverlay" class="login-overlay" style="transition: opacity .5s ease;">
     <div class="login-card" data-tilt data-aos="zoom-in">
-        <div class="logo-heart">💚</div>
-        <h4 style="margin-bottom:6px;">Halo, sayang</h4>
+        <div class="logo-heart">😲</div>
+        <h4 style="margin-bottom:6px;">Halooooo</h4>
         <p class="muted-small">Masukin sesuatu yang paling kita suka — jangan lupa ya :)</p>
 
         <div class="mt-3">
             <div class="input-group mb-2">
                 <span class="input-group-text">Lock</span>
                 <input id="passwordInput" type="password" class="form-control"
-                    placeholder="Masukkan panggilan kesayangan" onkeypress="if(event.key==='Enter') doLogin()">
+                    placeholder="Codenya apa yahh" onkeypress="if(event.key==='Enter') doLogin()">
             </div>
             <div>
                 <button onclick="doLogin()" class="btn btn-primary w-100">Masuk</button>
@@ -72,7 +72,7 @@ include 'views/partials/header.php';
             <div id="loginMsg" class="mt-3 muted-small" style="min-height:20px"></div>
         </div>
 
-        <div class="mt-3 muted-small">Tip: kata kunci defaultnya adalah <strong>"Matcha"</strong></div>
+        <div class="mt-3 muted-small">Tip: kata kunci defaultnya adalah <strong>"kepo banget sihh"</strong></div>
     </div>
 </div>
 
