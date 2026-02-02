@@ -1,0 +1,5 @@
+<?php
+// logout.php
+require_once 'lib/auth.php';
+logout();
+?>
